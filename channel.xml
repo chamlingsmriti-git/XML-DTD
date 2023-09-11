@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding ="UTF-8" standard="yes"?>
+<!DOCTYPE TVSCHEDULE[
+<!ELEMENT TVSCHEDULE (channel+)>
+<!ELEMENT channel(banner,day+)>
+<!ELEMENT banner(#PCDATA)>
+<!ELEMENT day(date,(holiday | programslot)+)>
+<!ELEMENT date(#PCDATA)>
+<!ELEMENT holiday(#PCDATA)>
+<!ELEMENT programslot(time,title,description?)>
+<!ELEMENT time(#PCDATA)>
+<!ELEMENT title(#PCDATA)>
+<!ELEMENT description(#PCDATA)>
+<!ATTLIST TVSCHEDULE Name CDATA #REQUIRED>
+<!ATTLIST channel chan CDATA#REQUIRED>
+<!ATTLIST programslot vtr CDATA #IMPLIED>
+<!ATTLIST title
+Rating CDATA #IMPLIED
+Language CDATA #IMPLIED
+>
+]>
+
+
+<TVSCHEDULE name="123">
+<channel chan="Kantipur">
+<banner>this is kantipur channel</banner>
+<day>
+<date>2080-05-25</date>
+<holiday>Saturday</holiday>
+<programslot vtr="sss">
+<time>10:00AM</time>
+<title Rating="4" Language="Nepali">ABCD</title>
+<description>Welcome to kantipur channel</description>
+</programslot>
+</day>
+<day>
+<date>2080-05-30</date>
+<programslot vtr="aaa">
+<time>9:00AM</time>
+<title Rating="5" Language="Enlish">xyz</title>
+<description>Welcome to ABC channel</description>
+</programslot>
+</day>
+</channel>
+<channel chan="Himalayan">
+<banner>this is Himalayan channel</banner>
+<day>
+<date>2079-03-14</date>
+<programslot vtr="ccc">
+<time>8:00AM</time>
+<title Rating="4.5" Language="Korean">abcd</title>
+<description>Welcome to Himalayan channel</description>
+</programslot>
+</day>
+</channel>
+</TVSCHEDULE>
+
+
